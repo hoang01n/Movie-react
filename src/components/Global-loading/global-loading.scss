@@ -1,0 +1,46 @@
+@use "../../scss/" as *;
+
+.GlobalLoading {
+    z-index: 100;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: all 1s ease;
+    visibility: visible;
+
+    .loading-item {
+        &>.loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+
+            @include mobile {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    &>* {
+        position: fixed;
+        z-index: 100000;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    &.hiden {
+        opacity: 1;
+        visibility: hidden;
+    }
+}
