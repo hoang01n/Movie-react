@@ -11,7 +11,7 @@ const Home = () => {
       {/* <h1 className="hhh" style={{color: "red"}}>
         ssss
       </h1> */}
-      <HeroSlide />;
+      <HeroSlide />
       <div className="container">
         <div className="section mb-3">
           <div className="section__header mb-2">
